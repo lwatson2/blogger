@@ -60,10 +60,18 @@ a {
 .left{
       left: 0px;
     position: fixed;
-    width: 220px
+    width: 220px;
+    display: flex;
 }
 .right-tag{
   float: left;
     padding-right: 27px;
 
+}
+.left-list{
+  float: right;
+  padding-left: 28px
+}
+.new-article-link{
+  padding-left: 46%;
 }
