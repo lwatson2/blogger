@@ -9,11 +9,40 @@
   </head>
 
   <body>
+  <div id="flash-wrapper">
   	<p class="flash"><%= flash.notice %></p>
+    </div>
+    <div class="sidebar">
+  <div class="right">
+  <ul>
+    <li class="right-li"> 
+    
+    <%= link_to "Homepage", articles_path %>
+    </li>
+    <li class="left-li">
+      <%= link_to "Create a new Author", new_author_path %>
+      </li>
+      
+    </ul>
+    </div>
+    <div class="left">
+    <ul>
+    <li class="right-tag">
+    <%= link_to "List of tags", tags_path %>
+    </li>
+    <li class="left-list">
+    <%= link_to "List of Authors", authors_path %>
+    </li>
+    </ul>
+</div>
+
+</div>
     <div id="container">
       <div id="content">
+    <%= yield :sidebar %>
     <%= yield %>
-    <hr>
+
+        <hr>
     <h6>
     <% if logged_in? %>
       <%= "Logged in as #{current_user.email} " %>
@@ -24,5 +53,10 @@
       </h6>
       </div>
       </div>
+      <script> 
+      var s = document.getElementById('flash-wrapper').style;
+s.opacity = 1;
+(function fade(){(s.opacity-=.1)<0?s.display="none":setTimeout(fade,450)})()
+</script>
   </body>
 </html>

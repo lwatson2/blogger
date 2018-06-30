@@ -34,3 +34,36 @@ a {
   clear: both;
   padding-top: 20px;
 }
+.sidebar {
+  left: 0;
+  position: fixed;
+  height: 37px;
+  top: 0px;
+  width: 100%;
+}
+.right {
+  right: 0px;
+  position: fixed;
+  width: 220px;
+}
+.right-li {
+  float:right
+}
+#notice-wrapper{
+  position: absolute;
+    top: 0;
+    width: 100%
+}
+.flash{
+      background: rgba(197, 87, 77, 0.53);
+}
+.left{
+      left: 0px;
+    position: fixed;
+    width: 220px
+}
+.right-tag{
+  float: left;
+    padding-right: 27px;
+
+}
